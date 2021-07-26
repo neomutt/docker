@@ -12,6 +12,7 @@ RUN apt update && \
      liblmdb-dev liblua5.2-dev liblz4-dev libncursesw5-dev \ 
      libnotmuch-dev libqdbm-dev librocksdb-dev libsasl2-dev \
      libslang2-dev libssl-dev libtdb-dev libtokyocabinet-dev \
-     libxml2-utils libzstd-dev lua5.2 lynx xsltproc git make && \
+     libxml2-utils libzstd-dev lua5.2 lynx xsltproc git make \
+     libsqlite3-dev libkrb5-dev && \
     dpkg-reconfigure --frontend noninteractive tzdata && \
     apt autoclean && apt autoremove
