@@ -2,10 +2,9 @@ name: Build Docker Image
 
 on:
   push:
-    branches: [ main ]
 
 jobs:
-  build-svc:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,7 +15,6 @@ jobs:
         with:
           github-push-secret: ${{secrets.GITHUB_TOKEN}}
           docker-image-name: neomutt-docker-build
-          docker-image-tag: latest # optional
-          dockerfile-path: ./Dockerfile # optional
-          # build-context: ./src/svc # optional
+          docker-image-tag: latest
+          dockerfile-path: ./Dockerfile
 
