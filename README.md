@@ -1,2 +1,2 @@
-# neomutt-docker-build
+# docker-build
 Docker image for neomutt builds

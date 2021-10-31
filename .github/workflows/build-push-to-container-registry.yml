@@ -16,7 +16,7 @@ jobs:
         name: Build and Publish latest service image
         with:
           github-push-secret: ${{secrets.GITHUB_TOKEN}}
-          docker-image-name: neomutt-docker-build
+          docker-image-name: docker-build
           docker-image-tag: latest
           dockerfile-path: ./Dockerfile
 
