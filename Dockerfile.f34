@@ -1,0 +1,42 @@
+# Create a NeoMutt development environment based on Fedora 34
+FROM fedora:34
+
+RUN \
+	dnf clean all && \
+	dnf -y update && \
+	dnf install -y \
+		cyrus-sasl-devel \
+		docbook-dtds \
+		docbook-style-xsl \
+		elinks \
+		gcc \
+		gdbm-devel \
+		gettext-devel \
+		git \
+		gnutls-devel \
+		gpgme-devel \
+		krb5-devel \
+		libdb-devel \
+		libidn-devel \
+		libtdb-devel \
+		libxslt \
+		libzstd-devel \
+		lmdb-devel \
+		lua \
+		lua-devel \
+		lynx \
+		lz4-devel \
+		ncurses-devel \
+		notmuch-devel \
+		openssl-devel \
+		qdbm-devel \
+		redhat-rpm-config \
+		slang-devel \
+		sqlite \
+		sqlite-devel \
+		tar \
+		tcl \
+		tokyocabinet-devel \
+		w3m
+
+# vim: syn=dockerfile
