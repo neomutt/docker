@@ -11,23 +11,21 @@ jobs:
     strategy:
       matrix:
         cfg:
-          - name: Centos 7
-            key: 7
-          - name: Centos 8
-            key: 8
+          - version: 7
+          - version: 8
 
-    name: Build ${{ matrix.cfg.name }}
+    name: Build Centos ${{ matrix.cfg.version }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Build ${{ matrix.cfg.name }}
+      - name: Build Centos ${{ matrix.cfg.version }}
         uses: pmorelli92/github-container-registry-build-push@2.0.0
         with:
           github-push-secret: ${{secrets.GITHUB_TOKEN}}
           docker-image-name: centos
-          docker-image-tag: ${{ matrix.cfg.key }}
-          dockerfile-path: ./Dockerfile.centos${{ matrix.cfg.key }}
+          docker-image-tag: ${{ matrix.cfg.version }}
+          dockerfile-path: ./Dockerfile.centos${{ matrix.cfg.version }}
 
