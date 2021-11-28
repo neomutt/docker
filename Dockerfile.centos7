@@ -1,0 +1,35 @@
+# Create a NeoMutt development environment based on Centos 7
+FROM centos:7
+
+RUN \
+	yum clean all && \
+	yum -y update && \
+	yum install -y \
+		cyrus-sasl-devel \
+		docbook-dtds \
+		docbook-style-xsl \
+		elinks \
+		gcc \
+		gdbm-devel \
+		gettext-devel \
+		git \
+		gnutls-devel \
+		gpgme-devel \
+		krb5-devel \
+		libdb-devel \
+		libidn-devel \
+		libtdb-devel \
+		libxslt \
+		lua-devel \
+		lynx \
+		lz4-devel \
+		make \
+		ncurses-devel \
+		openssl-devel \
+		pcre2-devel \
+		slang-devel \
+		sqlite-devel \
+		tcl \
+		tokyocabinet-devel
+
+# vim: syn=dockerfile
