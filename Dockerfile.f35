@@ -29,6 +29,7 @@ RUN \
 		ncurses-devel \
 		notmuch-devel \
 		openssl-devel \
+		pcre2-devel \
 		qdbm-devel \
 		redhat-rpm-config \
 		slang-devel \
