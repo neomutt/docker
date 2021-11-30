@@ -2,6 +2,9 @@
 name: Fedora
 on:
   push:
+    paths:
+      - '.github/workflows/fedora.yml'
+      - 'Dockerfile.f*'
   schedule:
     - cron: '0 3 1 * *'
       # 1st of the month at 03:00

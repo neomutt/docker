@@ -2,6 +2,10 @@
 name: Centos
 on:
   push:
+    paths:
+      - '.github/workflows/centos.yml'
+      - 'Dockerfile.centos*'
+      - 'centos8.repo'
   schedule:
     - cron: '0 3 1 * *'
       # 1st of the month at 03:00
