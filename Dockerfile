@@ -19,6 +19,7 @@ RUN \
 		graphviz \
 		jimsh \
 		lcov \
+		libasan6 \
 		libdb-dev \
 		libgdbm-dev \
 		libgnutls28-dev \
@@ -45,6 +46,7 @@ RUN \
 		lua5.2 \
 		lynx \
 		make \
+		rsync \
 		w3m \
 		wget \
 		xsltproc && \
