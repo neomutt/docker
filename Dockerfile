@@ -41,6 +41,7 @@ RUN \
 		libssl-dev \
 		libtdb-dev \
 		libtokyocabinet-dev \
+		libunwind-dev \
 		libxml2-utils \
 		libzstd-dev \
 		lua5.2 \
