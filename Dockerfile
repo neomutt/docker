@@ -35,6 +35,7 @@ RUN \
 		liblz4-dev \
 		libncursesw5-dev \
 		libnotmuch-dev \
+		libpcre2-dev \
 		libqdbm-dev \
 		librocksdb-dev \
 		libsasl2-dev \
