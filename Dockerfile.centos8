@@ -19,6 +19,7 @@ RUN \
 		gpgme-devel \
 		krb5-devel \
 		libdb-devel \
+		libgsasl-devel \
 		libidn-devel \
 		libidn2-devel \
 		libtdb-devel \

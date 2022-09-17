@@ -26,6 +26,7 @@ RUN \
 		libgdbm-dev \
 		libgnutls28-dev \
 		libgpgme11-dev \
+		libgsasl-dev \
 		libgss-dev \
 		libidn2-0-dev \
 		libkrb5-dev \
