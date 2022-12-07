@@ -1,4 +1,4 @@
-# Create a NeoMutt development environment based on Fedora 34
+# Create a NeoMutt development environment based on Fedora 37
 FROM fedora:f37
 
 RUN \
