@@ -13,14 +13,14 @@ lots of development packages.  This takes time and lots of bandwidth.
 To speed up the builds, we create Docker images containing a full development
 environment.
 
-The main tests are done in an Ubuntu 20.04 (latest) environment.  
+The main tests are done in an Ubuntu 22.04 (latest) environment.  
 We also perform weekly tests under Centos and Fedora.
 
 ## Building
 
 The images are built by more GitHub Actions:
 
-- [build.yml](.github/workflows/build.yml) -- Ubuntu 20.04
+- [build.yml](.github/workflows/build.yml) -- Ubuntu 22.04
 - [centos.yml](.github/workflows/centos.yml) -- Centos 7, 8
 - [fedora.yml](.github/workflows/fedora.yml) -- Fedora 34, 35, 36 (rawhide)
 
@@ -31,7 +31,7 @@ The builds are defined by Dockerfiles:
 
 | Dockerfile                               | Description         |
 | :--------------------------------------- | :------------------ |
-| [Dockerfile](Dockerfile)                 | Ubuntu 20.04        |
+| [Dockerfile](Dockerfile)                 | Ubuntu 22.04        |
 | [Dockerfile.centos7](Dockerfile.centos7) | Centos 7 / RHEL 7   |
 | [Dockerfile.centos8](Dockerfile.centos8) | Centos 8 / RHEL 8   |
 | [Dockerfile.f34](Dockerfile.f34)         | Fedora 34           |

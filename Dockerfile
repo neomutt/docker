@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -9,7 +9,7 @@ RUN \
 	apt install -y \
 		autopoint \
 		ccache \
-		clang-10 \
+		clang-14 \
 		curl \
 		docbook-simple \
 		docbook-xsl \
@@ -22,7 +22,7 @@ RUN \
 		lcov \
 		libasan6 \
 		libdb-dev \
-		libfuzzer-10-dev \
+		libfuzzer-14-dev \
 		libgdbm-dev \
 		libgnutls28-dev \
 		libgpgme11-dev \
@@ -52,6 +52,7 @@ RUN \
 		lynx \
 		make \
 		rsync \
+		tzdata \
 		w3m \
 		wget \
 		xsltproc && \
