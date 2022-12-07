@@ -1,5 +1,5 @@
 # Create a NeoMutt development environment based on Fedora 34
-FROM fedora:34
+FROM fedora:f37
 
 RUN \
 	dnf clean all && \

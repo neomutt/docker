@@ -1,5 +1,5 @@
 # Create a NeoMutt development environment based on Fedora 36 (rawhide)
-FROM fedora:rawhide
+FROM fedora:f36
 
 RUN \
 	dnf clean all && \
