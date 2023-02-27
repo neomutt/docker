@@ -25,10 +25,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.3.0
 
       - name: Build Fedora ${{ matrix.cfg.version }}
-        uses: pmorelli92/github-container-registry-build-push@2.0.0
+        uses: pmorelli92/github-container-registry-build-push@v2.1.0
         with:
           github-push-secret: ${{secrets.GITHUB_TOKEN}}
           docker-image-name: fedora

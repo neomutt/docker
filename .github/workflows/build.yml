@@ -14,10 +14,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3.3.0
         name: Checkout repository
 
-      - uses: pmorelli92/github-container-registry-build-push@2.0.0
+      - uses: pmorelli92/github-container-registry-build-push@v2.1.0
         name: Build and Publish
         with:
           github-push-secret: ${{secrets.GITHUB_TOKEN}}
