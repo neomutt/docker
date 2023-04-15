@@ -1,12 +1,10 @@
-# Create a NeoMutt development environment based on Centos 8
-FROM centos:8
-
-COPY centos8.repo /etc/yum.repos.d
+# Create a NeoMutt development environment based on Fedora 39 (rawhide)
+FROM fedora:rawhide
 
 RUN \
 	dnf clean all && \
 	dnf -y update && \
-	dnf --enablerepo=powertools install -y \
+	dnf install -y \
 		cyrus-sasl-devel \
 		docbook-dtds \
 		docbook-style-xsl \
@@ -21,21 +19,26 @@ RUN \
 		libdb-devel \
 		libgsasl-devel \
 		libidn-devel \
-		libidn2-devel \
 		libtdb-devel \
 		libxslt \
 		libzstd-devel \
+		lmdb-devel \
+		lua \
 		lua-devel \
 		lynx \
 		lz4-devel \
-		make \
 		ncurses-devel \
 		notmuch-devel \
 		openssl-devel \
 		pcre2-devel \
+		qdbm-devel \
+		redhat-rpm-config \
 		slang-devel \
+		sqlite \
 		sqlite-devel \
+		tar \
 		tcl \
-		tokyocabinet-devel
+		tokyocabinet-devel \
+		w3m
 
 # vim: syn=dockerfile
