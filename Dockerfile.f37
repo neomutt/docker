@@ -5,6 +5,7 @@ RUN \
 	dnf clean all && \
 	dnf -y update && \
 	dnf install -y \
+		ccache \
 		cyrus-sasl-devel \
 		docbook-dtds \
 		docbook-style-xsl \
