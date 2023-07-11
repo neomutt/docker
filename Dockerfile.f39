@@ -2,8 +2,8 @@
 FROM fedora:rawhide
 
 RUN \
-	dnf clean all && \
 	mkdir -p /var/cache/libdnf5 && \
+	dnf clean all && \
 	dnf -y update && \
 	dnf install -y \
 		ccache \
