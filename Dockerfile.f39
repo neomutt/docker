@@ -2,11 +2,12 @@
 FROM fedora:rawhide
 
 RUN \
-	mkdir -p /var/cache/libdnf5 && \
 	dnf clean all && \
 	dnf -y update && \
 	dnf install -y \
 		ccache \
+		clang \
+		clang-tools-extra \
 		cyrus-sasl-devel \
 		docbook-dtds \
 		docbook-style-xsl \
@@ -17,7 +18,10 @@ RUN \
 		git \
 		gnutls-devel \
 		gpgme-devel \
+		iwyu \
+		jq \
 		krb5-devel \
+		kyotocabinet-devel \
 		libdb-devel \
 		libgsasl-devel \
 		libidn-devel \
@@ -35,6 +39,7 @@ RUN \
 		pcre2-devel \
 		qdbm-devel \
 		redhat-rpm-config \
+		rocksdb-devel \
 		slang-devel \
 		sqlite \
 		sqlite-devel \
