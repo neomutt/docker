@@ -2,6 +2,7 @@
 FROM fedora:rawhide
 
 RUN \
+	mkdir -p /var/cache/libdnf5 && \
 	dnf clean all && \
 	dnf -y update && \
 	dnf install -y \

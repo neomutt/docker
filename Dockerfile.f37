@@ -21,7 +21,6 @@ RUN \
 		iwyu \
 		jq \
 		krb5-devel \
-		kyotocabinet-devel \
 		libdb-devel \
 		libgsasl-devel \
 		libidn-devel \
