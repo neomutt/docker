@@ -1,11 +1,10 @@
 # Create a NeoMutt development environment based on Fedora 39 (rawhide)
 FROM fedora:rawhide
 
-RUN \
-	mkdir -p /var/cache/libdnf5 && \
+RUN	mkdir -p /var/cache/libdnf5 && \
 	dnf clean all && \
 	dnf -y update && \
-	dnf install -y \
+	dnf5 install -y \
 		ccache \
 		clang \
 		clang-tools-extra \
