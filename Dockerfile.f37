@@ -11,6 +11,7 @@ RUN \
 		cyrus-sasl-devel \
 		docbook-dtds \
 		docbook-style-xsl \
+		doxygen \
 		elinks \
 		gcc \
 		gdbm-devel \
@@ -18,6 +19,7 @@ RUN \
 		git \
 		gnutls-devel \
 		gpgme-devel \
+		graphviz \
 		iwyu \
 		jq \
 		krb5-devel \
@@ -39,6 +41,7 @@ RUN \
 		qdbm-devel \
 		redhat-rpm-config \
 		rocksdb-devel \
+		rsync \
 		slang-devel \
 		sqlite \
 		sqlite-devel \
