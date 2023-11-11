@@ -16,9 +16,9 @@ jobs:
       fail-fast: false
       matrix:
         cfg:
-          - version: 37
           - version: 38
           - version: 39
+          - version: 40
 
     name: Build Fedora ${{ matrix.cfg.version }}
     runs-on: ubuntu-latest
