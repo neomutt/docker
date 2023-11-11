@@ -1,5 +1,5 @@
-# Create a NeoMutt development environment based on Fedora 37
-FROM fedora:37
+# Create a NeoMutt development environment based on Fedora 40 (rawhide)
+FROM fedora:rawhide
 
 RUN \
 	dnf clean all && \
@@ -23,6 +23,7 @@ RUN \
 		iwyu \
 		jq \
 		krb5-devel \
+		kyotocabinet-devel \
 		libdb-devel \
 		libgsasl-devel \
 		libidn-devel \
