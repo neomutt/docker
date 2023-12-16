@@ -1,5 +1,5 @@
 # Create Ubuntu Docker image containing all the packages required for a full build of NeoMutt.
-name: Build Docker Image
+name: Ubuntu
 on:
   push:
     paths:
