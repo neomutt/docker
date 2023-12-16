@@ -9,7 +9,8 @@ RUN \
 	apt install -y \
 		autopoint \
 		ccache \
-		clang-14 \
+		clang \
+		cmake \
 		curl \
 		docbook-simple \
 		docbook-xsl \
@@ -21,6 +22,7 @@ RUN \
 		jimsh \
 		lcov \
 		libasan6 \
+		libclang-dev \
 		libdb-dev \
 		libfuzzer-14-dev \
 		libgdbm-dev \
@@ -48,6 +50,7 @@ RUN \
 		libunwind-dev \
 		libxml2-utils \
 		libzstd-dev \
+		llvm-dev \
 		lua5.2 \
 		lynx \
 		make \
