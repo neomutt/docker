@@ -35,5 +35,5 @@ jobs:
           github-push-secret: ${{secrets.GITHUB_TOKEN}}
           docker-image-name: fedora
           docker-image-tag: ${{ matrix.cfg.version }}
-          dockerfile-path: ./Dockerfile.f${{ matrix.cfg.version }}
+          dockerfile-path: ./fedora.${{ matrix.cfg.version }}/Dockerfile
 

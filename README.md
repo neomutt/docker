@@ -1,7 +1,7 @@
 # Docker Images
 
 <div style="float: right;">
-<a href="https://github.com/neomutt/docker-build/actions/workflows/build.yml"><img src="https://github.com/neomutt/docker-build/actions/workflows/build.yml/badge.svg" /></a>
+<a href="https://github.com/neomutt/docker-build/actions/workflows/ubuntu.yml"><img src="https://github.com/neomutt/docker-build/actions/workflows/ubuntu.yml/badge.svg" /></a>
 <a href="https://github.com/neomutt/docker-build/actions/workflows/fedora.yml"><img src="https://github.com/neomutt/docker-build/actions/workflows/fedora.yml/badge.svg" /></a>
 </div>
 
@@ -19,7 +19,7 @@ We also perform weekly tests under Fedora.
 
 The images are built by more GitHub Actions:
 
-- [build.yml](.github/workflows/build.yml) -- Ubuntu 22.04
+- [ubuntu.yml](.github/workflows/ubuntu.yml) -- Ubuntu 22.04
 - [fedora.yml](.github/workflows/fedora.yml) -- Fedora 38, 39, 40 (rawhide)
 
 Each Action is scheduled to run automaticaly on the 1<sup>st</sup> of the month at 3am.  
