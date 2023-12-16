@@ -3,8 +3,8 @@ name: Build Docker Image
 on:
   push:
     paths:
-      - '.github/workflows/build.yml'
-      - 'Dockerfile'
+      - '.github/workflows/ubuntu.yml'
+      - 'ubuntu.22.04/Dockerfile'
   schedule:
     - cron: '0 3 1 * *'
       # 1st of the month at 03:00
@@ -21,7 +21,7 @@ jobs:
         name: Build and Publish
         with:
           github-push-secret: ${{secrets.GITHUB_TOKEN}}
-          docker-image-name: docker-build
+          docker-image-name: ubuntu
           docker-image-tag: latest
-          dockerfile-path: ./Dockerfile
+          dockerfile-path: ./ubuntu.22.04/Dockerfile
 

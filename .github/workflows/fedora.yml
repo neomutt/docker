@@ -4,7 +4,9 @@ on:
   push:
     paths:
       - '.github/workflows/fedora.yml'
-      - 'Dockerfile.f*'
+      - 'fedora.38/Dockerfile'
+      - 'fedora.39/Dockerfile'
+      - 'fedora.40/Dockerfile'
   schedule:
     - cron: '0 3 1 * *'
       # 1st of the month at 03:00

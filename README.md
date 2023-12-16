@@ -27,10 +27,14 @@ This will ensure we have up-to-date packages for every environment.
 
 The builds are defined by Dockerfiles:
 
-| Dockerfile                               | Description         |
-| :--------------------------------------- | :------------------ |
-| [Dockerfile](Dockerfile)                 | Ubuntu 22.04        |
-| [Dockerfile.f38](Dockerfile.f38)         | Fedora 38           |
-| [Dockerfile.f39](Dockerfile.f39)         | Fedora 39           |
-| [Dockerfile.f40](Dockerfile.f40)         | Fedora 40 (rawhide) |
+| Dockerfile                                         | Description         |
+| :------------------------------------------------- | :------------------ |
+| [ubuntu.22.04/Dockerfile](ubuntu.22.04/Dockerfile) | Ubuntu 22.04        |
+| [fedora.38/Dockerfile](fedora.38/Dockerfile)       | Fedora 38           |
+| [fedora.39/Dockerfile](fedora.39/Dockerfile)       | Fedora 39           |
+| [fedora.40/Dockerfile](fedora.40/Dockerfile)       | Fedora 40 (rawhide) |
+
+
+
+
 
