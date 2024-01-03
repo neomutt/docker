@@ -1,8 +1,8 @@
 # Docker Images
 
 <div style="float: right;">
-<a href="https://github.com/neomutt/docker-build/actions/workflows/ubuntu.yml"><img src="https://github.com/neomutt/docker-build/actions/workflows/ubuntu.yml/badge.svg" /></a>
-<a href="https://github.com/neomutt/docker-build/actions/workflows/fedora.yml"><img src="https://github.com/neomutt/docker-build/actions/workflows/fedora.yml/badge.svg" /></a>
+<a href="https://github.com/neomutt/docker/actions/workflows/ubuntu.yml"><img src="https://github.com/neomutt/docker/actions/workflows/ubuntu.yml/badge.svg" /></a>
+<a href="https://github.com/neomutt/docker/actions/workflows/fedora.yml"><img src="https://github.com/neomutt/docker/actions/workflows/fedora.yml/badge.svg" /></a>
 </div>
 
 The basic Docker image used by [GitHub Actions](https://docs.github.com/en/actions)
