@@ -24,6 +24,7 @@ RUN \
 		jq \
 		krb5-devel \
 		kyotocabinet-devel \
+		lcov \
 		libdb-devel \
 		libgsasl-devel \
 		libidn-devel \
