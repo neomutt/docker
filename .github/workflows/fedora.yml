@@ -7,6 +7,7 @@ on:
       - 'fedora.39/Dockerfile'
       - 'fedora.40/Dockerfile'
       - 'fedora.41/Dockerfile'
+      - 'fedora.42/Dockerfile'
   schedule:
     - cron: '0 3 1 * *'
       # 1st of the month at 03:00
@@ -21,6 +22,7 @@ jobs:
           - version: 39
           - version: 40
           - version: 41
+          - version: 42
 
     name: Build Fedora ${{ matrix.cfg.version }}
     runs-on: ubuntu-latest
