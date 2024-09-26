@@ -3,10 +3,10 @@ name: Fedora
 on:
   push:
     paths:
-      - '.github/workflows/fedora.yml'
-      - 'fedora.39/Dockerfile'
-      - 'fedora.40/Dockerfile'
-      - 'fedora.41/Dockerfile'
+      # - '.github/workflows/fedora.yml'
+      # - 'fedora.39/Dockerfile'
+      # - 'fedora.40/Dockerfile'
+      # - 'fedora.41/Dockerfile'
       - 'fedora.42/Dockerfile'
   schedule:
     - cron: '0 3 1 * *'
@@ -19,9 +19,9 @@ jobs:
       fail-fast: false
       matrix:
         cfg:
-          - version: 39
-          - version: 40
-          - version: 41
+          # - version: 39
+          # - version: 40
+          # - version: 41
           - version: 42
 
     name: Build Fedora ${{ matrix.cfg.version }}
