@@ -1,4 +1,4 @@
-# Create a NeoMutt development environment based on Fedora 41 (rawhide)
+# Create a NeoMutt development environment based on Fedora 41
 FROM fedora:41
 
 RUN \
