@@ -1,5 +1,5 @@
-# Create a NeoMutt development environment based on Fedora 43 (rawhide)
-FROM fedora:rawhide
+# Create a NeoMutt development environment based on Fedora 43
+FROM fedora:43
 
 RUN \
 	dnf clean all && \
