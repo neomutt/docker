@@ -20,7 +20,7 @@ We also perform weekly tests under Fedora.
 The images are built by more GitHub Actions:
 
 - [ubuntu.yml](.github/workflows/ubuntu.yml) -- Ubuntu 24.04
-- [fedora.yml](.github/workflows/fedora.yml) -- Fedora 41, 42, 43 (rawhide)
+- [fedora.yml](.github/workflows/fedora.yml) -- Fedora 42, 43, 44 (rawhide)
 
 Each Action is scheduled to run automaticaly on the 1<sup>st</sup> of the month at 3am.  
 This will ensure we have up-to-date packages for every environment.
@@ -30,7 +30,7 @@ The builds are defined by Dockerfiles:
 | Dockerfile                                         | Description         |
 | :------------------------------------------------- | :------------------ |
 | [ubuntu.24.04/Dockerfile](ubuntu.24.04/Dockerfile) | Ubuntu 24.04        |
-| [fedora.41/Dockerfile](fedora.41/Dockerfile)       | Fedora 41           |
 | [fedora.42/Dockerfile](fedora.42/Dockerfile)       | Fedora 42           |
-| [fedora.43/Dockerfile](fedora.43/Dockerfile)       | Fedora 43 (rawhide) |
+| [fedora.43/Dockerfile](fedora.43/Dockerfile)       | Fedora 43           |
+| [fedora.44/Dockerfile](fedora.44/Dockerfile)       | Fedora 44 (rawhide) |
 

@@ -4,9 +4,9 @@ on:
   push:
     paths:
       - '.github/workflows/fedora.yml'
-      - 'fedora.41/Dockerfile'
       - 'fedora.42/Dockerfile'
       - 'fedora.43/Dockerfile'
+      - 'fedora.44/Dockerfile'
   schedule:
     - cron: '0 3 1 * *'
       # 1st of the month at 03:00
@@ -18,9 +18,9 @@ jobs:
       fail-fast: false
       matrix:
         cfg:
-          - version: 41
           - version: 42
           - version: 43
+          - version: 44
 
     name: Build Fedora ${{ matrix.cfg.version }}
     runs-on: ubuntu-latest
