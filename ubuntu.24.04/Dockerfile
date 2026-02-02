@@ -54,6 +54,7 @@ RUN \
 		lua5.2 \
 		lynx \
 		make \
+		mandoc \
 		rsync \
 		tzdata \
 		w3m \
