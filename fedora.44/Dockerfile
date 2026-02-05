@@ -44,7 +44,6 @@ RUN \
 		redhat-rpm-config \
 		rocksdb-devel \
 		rsync \
-		slang-devel \
 		sqlite \
 		sqlite-devel \
 		tar \

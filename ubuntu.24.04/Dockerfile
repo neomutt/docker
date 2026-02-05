@@ -42,7 +42,6 @@ RUN \
 		libqdbm-dev \
 		librocksdb-dev \
 		libsasl2-dev \
-		libslang2-dev \
 		libsqlite3-dev \
 		libssl-dev \
 		libtdb-dev \
