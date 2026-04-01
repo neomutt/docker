@@ -23,7 +23,6 @@ RUN \
 		lcov \
 		libasan6 \
 		libclang-dev \
-		libdb-dev \
 		libfuzzer-14-dev \
 		libgdbm-dev \
 		libgnutls28-dev \
@@ -32,20 +31,17 @@ RUN \
 		libgss-dev \
 		libidn2-0-dev \
 		libkrb5-dev \
-		libkyotocabinet-dev \
 		liblmdb-dev \
 		liblua5.2-dev \
 		liblz4-dev \
 		libncursesw5-dev \
 		libnotmuch-dev \
 		libpcre2-dev \
-		libqdbm-dev \
 		librocksdb-dev \
 		libsasl2-dev \
 		libsqlite3-dev \
 		libssl-dev \
 		libtdb-dev \
-		libtokyocabinet-dev \
 		libunwind-dev \
 		libxml2-utils \
 		libzstd-dev \
