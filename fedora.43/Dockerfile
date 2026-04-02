@@ -23,7 +23,9 @@ RUN \
 		iwyu \
 		jq \
 		krb5-devel \
+		kyotocabinet-devel \
 		lcov \
+		libdb-devel \
 		libgsasl-devel \
 		libidn-devel \
 		libtdb-devel \
@@ -38,6 +40,7 @@ RUN \
 		notmuch-devel \
 		openssl-devel \
 		pcre2-devel \
+		qdbm-devel \
 		redhat-rpm-config \
 		rocksdb-devel \
 		rsync \
@@ -45,6 +48,7 @@ RUN \
 		sqlite-devel \
 		tar \
 		tcl \
+		tokyocabinet-devel \
 		w3m
 
 # vim: syn=dockerfile
