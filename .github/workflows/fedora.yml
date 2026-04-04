@@ -25,7 +25,7 @@ jobs:
 
     name: Build Fedora ${{ matrix.cfg.version }}
     runs-on: ubuntu-latest
-    if: github.event.schedule != '0 3 * * 1'
+    if: github.event_name != 'schedule' || github.event.schedule == '0 3 1 * *'
 
     steps:
       - name: Checkout repository
@@ -48,7 +48,7 @@ jobs:
 
     name: Build Fedora ${{ matrix.cfg.version }}
     runs-on: ubuntu-latest
-    if: github.event.schedule != '0 3 1 * *'
+    if: github.event_name != 'schedule' || github.event.schedule == '0 3 * * 1'
 
     steps:
       - name: Checkout repository
