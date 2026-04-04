@@ -1,0 +1,65 @@
+# Create Debian Docker images containing all the packages required for a full build of NeoMutt.
+name: Debian
+on:
+  push:
+    paths:
+      - '.github/workflows/debian.yml'
+      - 'debian.bookworm/Dockerfile'
+      - 'debian.trixie/Dockerfile'
+      - 'debian.forky/Dockerfile'
+      - 'debian.sid/Dockerfile'
+  schedule:
+    - cron: '0 3 1 * *'
+      # 1st of the month at 03:00 for stable releases
+    - cron: '0 3 * * 1'
+      # Every Monday at 03:00 for development releases
+  workflow_dispatch:
+
+jobs:
+  build_stable:
+    strategy:
+      fail-fast: false
+      matrix:
+        cfg:
+          - version: bookworm
+          - version: trixie
+
+    name: Build Debian ${{ matrix.cfg.version }}
+    runs-on: ubuntu-latest
+    if: github.event.schedule == '0 3 1 * *'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Debian ${{ matrix.cfg.version }}
+        uses: pmorelli92/github-container-registry-build-push@2.2.1
+        with:
+          github-push-secret: ${{secrets.GITHUB_TOKEN}}
+          docker-image-name: debian
+          docker-image-tag: ${{ matrix.cfg.version }}
+          dockerfile-path: ./debian.${{ matrix.cfg.version }}/Dockerfile
+
+  build_development:
+    strategy:
+      fail-fast: false
+      matrix:
+        cfg:
+          - version: forky
+          - version: sid
+
+    name: Build Debian ${{ matrix.cfg.version }}
+    runs-on: ubuntu-latest
+    if: github.event.schedule == '0 3 * * 1'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Debian ${{ matrix.cfg.version }}
+        uses: pmorelli92/github-container-registry-build-push@2.2.1
+        with:
+          github-push-secret: ${{secrets.GITHUB_TOKEN}}
+          docker-image-name: debian
+          docker-image-tag: ${{ matrix.cfg.version }}
+          dockerfile-path: ./debian.${{ matrix.cfg.version }}/Dockerfile
