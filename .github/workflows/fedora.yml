@@ -9,21 +9,23 @@ on:
       - 'fedora.44/Dockerfile'
   schedule:
     - cron: '0 3 1 * *'
-      # 1st of the month at 03:00
+      # 1st of the month at 03:00 for stable releases
+    - cron: '0 3 * * 1'
+      # Every Monday at 03:00 for development releases
   workflow_dispatch:
 
 jobs:
-  build:
+  build_stable:
     strategy:
       fail-fast: false
       matrix:
         cfg:
           - version: 42
           - version: 43
-          - version: 44
 
     name: Build Fedora ${{ matrix.cfg.version }}
     runs-on: ubuntu-latest
+    if: github.event.schedule != '0 3 * * 1'
 
     steps:
       - name: Checkout repository
@@ -37,3 +39,25 @@ jobs:
           docker-image-tag: ${{ matrix.cfg.version }}
           dockerfile-path: ./fedora.${{ matrix.cfg.version }}/Dockerfile
 
+  build_development:
+    strategy:
+      fail-fast: false
+      matrix:
+        cfg:
+          - version: 44
+
+    name: Build Fedora ${{ matrix.cfg.version }}
+    runs-on: ubuntu-latest
+    if: github.event.schedule != '0 3 1 * *'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Fedora ${{ matrix.cfg.version }}
+        uses: pmorelli92/github-container-registry-build-push@2.2.1
+        with:
+          github-push-secret: ${{secrets.GITHUB_TOKEN}}
+          docker-image-name: fedora
+          docker-image-tag: ${{ matrix.cfg.version }}
+          dockerfile-path: ./fedora.${{ matrix.cfg.version }}/Dockerfile
